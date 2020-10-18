@@ -1,0 +1,18 @@
+﻿@using AplicacionMVCconRazor.Models;
+@model  Persona
+
+@{
+    ViewBag.Title = "Agregar Persona";
+}
+
+<h2>Agregar Persona</h2>
+
+@using (Html.BeginForm())
+{
+    <label>Nombre</label>
+    @Html.TextBoxFor(p => p.Nombre)
+    <label>Apellido</label>
+    @Html.TextBoxFor(p => p.Apellido)
+
+    <input type="submit" value="Agregar"/>
+}

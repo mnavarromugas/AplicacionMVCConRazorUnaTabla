@@ -1,0 +1,22 @@
+﻿@using AplicacionMVCconRazor.Models;
+@model List<Persona>
+
+@{
+    ViewBag.Title = "Lista de Personas";
+}
+
+<h2>Lista de personas</h2>
+
+<table>
+    @foreach (Persona p in Model)
+    {
+        <tr>
+            <td>@p.Nombre</td>
+            <td>@p.Apellido</td>
+            <td><a href="/Personas/Eliminar?id=@p.Id">Eliminar</a></td>
+            <td><a href="/Personas/Modificar?id=@p.Id">Modificar</a></td>
+        </tr>
+    }
+</table>
+
+<a href="/Personas/Agregar">Agregar una nueva persona...</a>
